@@ -1,0 +1,418 @@
+/*
+boje
+bijela: #f6f4f5
+tamnosiva-crna: #252525
+crvena-bordo: #7b2233
+roza: #d89a9e
+sivkasta: #ccc (za razna oivičenja)
+*/
+
+/*fontovi*/
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  .w400 {
+      font-weight: 400;
+  }
+    .w500 {
+      font-weight: 500;
+  }
+    .w700 {
+      font-weight: 700;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1 {
+    color: #7b2233;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  h2 {
+    color: #7b2233;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 10px 30px;
+  }
+  
+  h3 {
+    color: #252525;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    margin: auto;
+    padding: 10px 30px;
+    width: 100%;
+  }
+  
+  p {
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 90%;
+    margin: auto;
+    padding: 10px 30px;
+    text-align: justify;
+    text-indent: 50px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22.5%;
+    height: 30%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /*carousel settings*/
+  
+  .carousel-item {
+    margin: auto;
+    display: block;
+    position: relative;
+    height: 40rem;
+    background: #252525;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .container {
+    position: absolute;
+    left: 150px;
+    right: 150px;
+    margin-top: 200px; 
+  }
+  
+  .overlay-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /*header i navigacija*/
+  
+  .header {
+    width: 100%;
+    background: #7b2233;
+    color: #252525;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 10px 5%;
+  }
+  
+  nav a.active {
+    color: #f6f4f5;
+    background-color: #7b2233;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    background-color: #d89a9e;
+  }
+  
+  nav .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav input[type="text"] {
+    padding: 10px 30px;
+    font-size: 17px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    width: auto;
+  }
+  
+  nav .search-container button {
+    padding: 10px 30px;
+    font-size: 17px;
+    background: #f6f4f5;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  nav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  .logo {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-left: 5%;
+    font-size: 24px;
+  }
+  
+  
+  .nav-links {
+    text-align: center;
+    background: #7b2233;
+    padding: 10px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    flex-grow: 1;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-links ul li {
+    padding: 10px 25px;
+  }
+  
+  .nav-links ul li a {
+    color: #f6f4f5;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a {
+    padding: 10px;
+    display: inline-block;
+  }
+  
+  /* Prilagodbe za manje ekrane */
+  @media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 5%;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      width: 100%; 
+      text-align: left;
+    }
+  
+    .nav-links ul li {
+      width: 100%;
+      padding: 10px 15px;
+    }
+  
+    nav input[type="text"], nav .search-container button {
+      width: 100%;
+      margin: 5px 0;/
+    }
+  
+  nav .search-container {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  /*container za carousel*/
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto; 
+    padding: 20px;
+    background-color: #f6f4f5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: 0.5;
+  }
+  
+  /*container za kontakt formular*/
+  .container-form {
+    width: 60%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f6f4f5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-form input[type="text"],
+  .container-form input[type="email"],
+  .container-form select,
+  .container-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .container-form button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #7b2233;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .container-form button:hover {
+    background-color: #d89a9e;
+  }
+  
+  .container-form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /*mapa*/
+  .google-map {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .google-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+  }
+  
+  /*spotify playlista*/
+  .spotify-playlist {
+    padding-bottom: 20%;
+    position: relative;
+  }
+  
+  .spotify-playlist iframe {
+    height: 352;
+    width: 80%;
+    position: absolute;
+  }
+  
+  /*footer*/
+  
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #7b2233;
+    color: #f6f4f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* linkovi na društvene mreže unutar footera */
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: #d89a9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 15px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .icon i {
+    width: 28px;
+  }
+  
+  .icon a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d89a9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .icon a:hover {
+    opacity: 1;
+  }
+  
+  /* prilagodba ekrana opet */
+  @media screen and (max-width: 600px) {
+    .social-media {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .footer {
+      height: 80px;
+    }
+  }
